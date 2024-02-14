@@ -1,4 +1,4 @@
-# F27WD - CW1
+# Craigslist
 
 `index.html` in `~/craigslist` directory
 
