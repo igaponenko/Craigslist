@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "bundle": "browserify scripts/nav-bar.js scripts/storage.js scripts/home-page.js components.js -p esmify > scripts/browser/home.js && browserify scripts/search-page.js scripts/nav-bar.js scripts/storage.js components.js -p esmify > scripts/browser/search.js && browserify scripts/nav-bar.js scripts/storage.js scripts/post-page.js components.js -p esmify > scripts/browser/post.js"
+  },
+  "dependencies": {
+    "browser-resolve": "^2.0.0",
+    "lorem-ipsum": "^2.0.8"
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.0",
+    "esmify": "^2.1.1"
+  }
+}

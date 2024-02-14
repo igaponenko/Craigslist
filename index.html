@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Craigslist | Home</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="preload"
+      href="fonts/MotivaSansThin.ttf"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/MotivaSansLight.woff.ttf"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/MotivaSansRegular.woff.ttf"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/MotivaSansMedium.woff.ttf"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/MotivaSansBold.woff.ttf"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/MotivaSansExtraBold.ttf"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/MotivaSansBlack.woff.ttf"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.svg" />
+    <link rel="mask-icon" href="assets/logo.svg" color="#FFFFFF" />
+  </head>
+
+  <body>
+    <nav-bar></nav-bar>
+    <div class="desktop">
+        <div class="center-margin">
+          <div id="page-margin">
+            <div id="my-listings">
+              <h1>My Listings</h1>
+              <div class="posts-container">
+                <button
+                  id="my-listings-left-button"
+                  class="posts-scroll-button"
+                  style="rotate: 180deg"
+                  disabled
+                >
+                  <img src="assets/arrow-right-new.svg" alt="arrow" />
+                </button>
+                <div id="my-listings-scroll" class="horizontal-scroll">
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                </div>
+                <button id="my-listings-right-button" class="posts-scroll-button">
+                  <img src="assets/arrow-right-new.svg" alt="arrow" />
+                </button>
+              </div>
+            </div>
+            <div id="featured-posts">
+              <h1>Featured Posts</h1>
+              <div class="posts-container">
+                <button
+                  id="featured-posts-left-button"
+                  class="posts-scroll-button"
+                  style="rotate: 180deg"
+                  disabled
+                >
+                  <img src="assets/arrow-right-new.svg" alt="arrow" />
+                </button>
+                <div id="featured-posts-scroll" class="horizontal-scroll">
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                  <home-page-post-placeholder></home-page-post-placeholder>
+                </div>
+                <button
+                  id="featured-posts-right-button"
+                  class="posts-scroll-button"
+                >
+                  <img src="assets/arrow-right-new.svg" alt="arrow" />
+                </button>
+              </div>
+            </div>
+            <div id="categories">
+              <h1>Categories</h1>
+              <div class="posts-container">
+                <button
+                  id="categories-left-button"
+                  class="posts-scroll-button"
+                  style="rotate: 180deg; top: 0px"
+                  disabled
+                >
+                  <img src="assets/arrow-right-new.svg" alt="arrow" />
+                </button>
+                <div id="categories-scroll" class="horizontal-scroll">
+                  <home-page-category
+                    title="For Sale"
+                    img-src="assets/for-sale.png"
+                  ></home-page-category>
+                  <home-page-category
+                    title="Services"
+                    img-src="assets/services.png"
+                  ></home-page-category>
+                  <home-page-category
+                    title="Jobs"
+                    img-src="assets/jobs.png"
+                  ></home-page-category>
+                  <home-page-category
+                    title="Housing"
+                    img-src="assets/housing.png"
+                  ></home-page-category>
+                  <home-page-category
+                    title="Community"
+                    img-src="assets/community.png"
+                  ></home-page-category>
+                  <home-page-category
+                    title="Gigs"
+                    img-src="assets/gigs.jpeg"
+                  ></home-page-category>
+                  <home-page-category
+                    title="Discussion Forums"
+                    img-src="assets/discussion.jpeg"
+                  ></home-page-category>
+                  <home-page-category
+                    title="Resumes"
+                    img-src="assets/resume.jpeg"
+                  ></home-page-category>
+                </div>
+                <button
+                  id="categories-right-button"
+                  class="posts-scroll-button"
+                  style="top: 0px"
+                >
+                  <img src="assets/arrow-right-new.svg" alt="arrow" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mobile" style="height: 100%">
+      <main class="home-mobile-grid">
+        <div class="mobile-logo">
+          <div class="center">
+            <div class="center" style="width: 60%; height: 60%; color: var(--primary)">
+              <h1 class="craigslist-text">Craigslist</h1>
+            </div>
+          </div>
+
+        </div>
+        <div class="sub-grid">
+          <home-page-category-mobile
+            title="For Sale"
+            img-src="assets/for-sale.png"
+          ></home-page-category-mobile>
+          <home-page-category-mobile
+            title="Services"
+            img-src="assets/services.png"
+          ></home-page-category-mobile>
+          <home-page-category-mobile
+            title="Jobs"
+            img-src="assets/jobs.png"
+          ></home-page-category-mobile>
+          <home-page-category-mobile
+            title="Housing"
+            img-src="assets/housing.png"
+          ></home-page-category-mobile>
+          <home-page-category-mobile
+            title="Community"
+            img-src="assets/community.png"
+          ></home-page-category-mobile>
+          <home-page-category-mobile
+            title="Gigs"
+            img-src="assets/gigs.jpeg"
+          ></home-page-category-mobile>
+          <home-page-category-mobile
+            title="Discussion Forums"
+            img-src="assets/discussion.jpeg"
+          ></home-page-category-mobile>
+          <home-page-category-mobile
+            title="Resumes"
+            img-src="assets/resume.jpeg"
+          ></home-page-category-mobile>
+        </div>
+      </main>
+    </div>
+    <large-footer></large-footer>
+    <div id="toast"></div>
+    <script>
+      const url = new URL(window.location.href);
+      url.pathname = '/index.html';
+      window.history.replaceState({}, '', url);
+    </script>
+    <script src="scripts/browser/home.js"></script>
+    <script src="scripts/page-redirect.js"></script>
+  </body>
+</html>

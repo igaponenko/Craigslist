@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Craigslist | 'Results''</title>
+    <link
+      rel="preload"
+      href="fonts/MotivaSansThin.ttf"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/MotivaSansLight.woff.ttf"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/MotivaSansRegular.woff.ttf"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/MotivaSansMedium.woff.ttf"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/MotivaSansBold.woff.ttf"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/MotivaSansExtraBold.ttf"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/MotivaSansBlack.woff.ttf"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.svg" />
+    <link rel="mask-icon" href="assets/logo.svg" color="#FFFFFF" />
+  </head>
+  <body>
+    <nav-bar></nav-bar>
+    <div class="center-margin">
+      <div id="page-margin">
+          <span>
+            <h1 id="result-text">Results for 'car' in 'For Sale'</h1>
+            <span class="filter-dropdown">
+              <div class="dropdown">
+                <button onclick="dropdownCategory()" class="category-drop-button">Category
+                    <!-- <img src="assets/arrow-bruh.png" style="height: 10px; width: 16px; margin-top: 9px; margin-left: 3px;" alt=""/> -->
+                </button>
+              
+                <div id="category-dropdown" class="category-dropdown-content">
+                  <a id="for-sale">For Sale</a>
+                  <a id="services">Services</a>
+                  <a id="jobs">Jobs</a>
+                  <a id="housing">Housing</a>
+                  <a id="community">Community</a>
+                  <a id="gigs">Gigs</a>
+                  <a id="discussion-forums">Discussion Forums</a>
+                  <a id="resumes">Resumes</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button onclick="dropdownPrice()" class="price-drop-button">Price</button>
+                <div id="price-dropdown" class="price-dropdown-content">
+                  <a id="10000">10k AED</a>
+                  <a id="50000">50k AED</a>
+                  <a id="1000000">100k AED</a>
+                  <a id="25000000">250k AED</a>
+                  <a id="50000000">500k AED</a>
+                  <a id="100000000">1m AED</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button onclick="dropdownDistance()" class="distance-drop-button">Distance</button>
+                <div id="distance-dropdown" class="distance-dropdown-content">
+                  <a id="5km">5km</a>
+                  <a id="50km">50km</a>
+                  <a id="200km">200km</a>
+                  <a id="500km">500km</a>
+                  <a id="1000km">1000+km</a>
+                </div>
+              </div>
+            </span>
+            <!-- <span id="dropdown" class="filter-dropdown">
+              <span class="dropdown-selector">
+                <button onclick="myFunction()" class="dropbtn">
+                <span>
+                  <div>
+                    <h3 id="category">Category</h3>
+                  </div>
+                </span>
+              
+                <span style="height: 25px">
+                  <img
+                    id="test"
+                    class="undraggable"
+                    src="assets/arrow-bruh.png" style="height: 10px; width: 16px; margin-top: 9px; margin-left: 3px;"
+                    alt=""
+                  />
+                </span>
+              </button>
+              
+              </span>
+              <ul id="myDropdown" class="dropdown-content">
+                <li id="dropdown-for-sale">For Sale</li>
+                <li id="dropdown-services">Services</li>
+                <li id="dropdown-jobs">Jobs</li>
+                <li id="dropdown-housing">Housing</li>
+                <li id="dropdown-community">Community</li>
+                <li id="dropdown-gigs">Gigs</li>
+                <li id="dropdown-discussion-forums">Discussion Forums</li>
+                <li id="dropdown-resumes">Resumes</li>
+              </ul>
+            </span>
+            <span id="dropdown" class="filter-dropdown">
+              <div class="dropdown-selector">
+                <span>
+                  <div>
+                    <h3 id="price">Price</h3>
+                  </div>
+                </span>
+                <span style="height: 25px">
+                  <img
+                    id="test"
+                    class="undraggable"
+                    src="assets/arrow-bruh.png" style="height: 10px; width: 16px; margin-top: 9px; margin-left: 3px;"
+                    alt=""
+                  />
+                </span>
+              </div>
+              <ul class="menu">
+                <li id="10000">AED 10,000</li>
+                <li id="50000">AED 50,000</li>
+                <li id="100000">AED 100,000</li>
+                <li id="250000">AED 250,000</li>
+                <li id="500000">AED 500,000</li>
+                <li id="1000000">AED 1,000,000</li>
+              </ul>
+            </span>
+            <span id="dropdown" class="filter-dropdown">
+              <div class="dropdown-selector">
+                <span>
+                  <div>
+                    <h3 id="price">Date</h3>
+                  </div>
+                </span>
+                <span style="height: 25px">
+                  <img
+                    id="test"
+                    class="undraggable"
+                    src="assets/arrow-bruh.png" style="height: 10px; width: 16px; margin-top: 9px; margin-left: 3px;"
+                    alt=""
+                  />
+                </span>
+              </div>
+              <ul class="menu">
+                <li id="24-hours">24 hours</li>
+                <li id="1-week">1 week</li>
+                <li id="1-month">1 month</li>
+                <li id="6-months">6 months</li>
+                <li id="1-year">1 year</li>
+              </ul>
+            </span>
+            <span id="dropdown" class="filter-dropdown">
+              <div class="dropdown-selector">
+                <span>
+                  <div>
+                    <h3 id="distance">Distance</h3>
+                  </div>
+                </span>
+                <span style="height: 25px">
+                  <img
+                    id="test"
+                    class="undraggable"
+                    src="assets/arrow-bruh.png" style="height: 10px; width: 16px; margin-top: 9px; margin-left: 3px;"
+                    alt=""
+                  />
+                </span>
+              </div>
+              <ul class="menu">
+                <li id="5km">5km</li>
+                <li id="50km">50km</li>
+                <li id="200km">200km</li>
+                <li id="500km">500km</li>
+                <li id="1000km">1000+km</li>
+              </ul>
+            </span> -->
+          </span>
+        </span>
+        <span class="list-wrapper">
+          <div class="results-wrapper">
+          <span class="filter-bar-container" style="max-width: 370px"><p id="sort-by-text">Sort By</p>
+            <div id="sort-by" class="sort-grid">
+              <button id="sort-by-high-price" class="">Highest Price</button>
+              <button id="sort-by-newest" class="">Lowest Price</button>
+              <button id="sort-by-nearest" class="">Nearest</button>
+              <button id="sort-by-low-price" class="">Furthest</button>
+              <button id="sort-by-oldest" class="">Newest</button>
+              <button id="sort-by-furthest" class="">Oldest</button>
+            </div>
+            <div id="price-slider">
+              Max Price
+            <div class="price-slider-container">
+              <div class="price-content">
+                <div>
+                  <p id="min-value"></p>
+                </div>
+                <div>
+                  <p id="price-current-value">AED
+                    <span id="current-price"></span>
+                  </p>
+                </div>
+                <div>
+                  <p id="max-value"></p>
+                </div>
+              </div>
+            <div class="range-slider">
+              <input type="range" class="min-price" value="0" min="0" max="1000000" step="1000" id="price-range">
+            </div>
+              <div class="price-content">
+                <div><p id="price-min-value">AED 0</p></div>
+                <div><p id="price-max-value">AED 1,000,000+</p></div>
+              </div>
+            </div>
+            </div>
+            <div id="date-picker">
+              Date
+              <div id="date-input-from" class="date-input">
+                <label for="start">From:</label>
+                <input id="date-from" type="date" id="start" name="trip-start"
+                     min="2010-01-01" max="2023-2-28">
+              </div>
+              <div id="date-input-to" class="date-input">
+                <label for="start">To:</label>
+                <input id="date-to"type="date" id="finish" name="trip-finish"
+                     min="2010-01-01" max="2023-2-28">
+              </div>
+            </div>
+            <div id="distance-slider">
+              Max Distance
+              <div class="distance-slider-container">
+                <div class="distance-content">
+                  <div>
+                    <p id="min-value"></p>
+                  </div>
+                  <div>
+                    <p id="price-current-value">
+                      <span id="current-distance">
+                      </span>km
+                    </p>
+                  </div>
+                  <div>
+                    <p id="max-value"></p>
+                  </div>
+                </div>
+                <div class="range-slider">
+                  <input type="range" class="min-price" value="0" min="0" max="500" step="1" id="distance-range">
+                </div>
+                <div class="distance-content">
+                  <div>
+                    <p id="distance-min-value">0km</p>
+                  </div>
+                  <div>
+                    <p id="distance-max-value">500km</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div id="categories-title">
+                Categories
+              </div>
+              <div id="category-filter" class="sort-grid" style="height: calc(175px * 4/3)">
+                <button id="category-for-sale" class="">For Sale</button>
+                <button id="category-services" class="">Services</button>
+                <button id="category-jobs" class="">Jobs</button>
+                <button id="category-housing" class="">Housing</button>
+                <button id="category-community" class="">Community</button>
+                <button id="category-gigs" class="">Gigs</button>
+                <button id="category-discussion-forums" class="">Discussion Forums</button>
+                <button id="category-discussion-resumes" class="">Resumes</button>
+              </div>
+        </span>
+      </span>
+        <div class="center-horizontally">
+            <div id="results-wrapper" class="post-results-wrapper">
+              <div class="search-post-wrapper">
+                <div class="image-wrapper animated-background">
+                  <div class="price-distance-wrapper">
+                    <div
+                      class="price animated-background-price"
+                      style="width: 125px; height: 39px; padding: 0px"
+                    ></div>
+                  </div>
+                </div>
+                <div class="text-wrapper" style="flex-grow: 1">
+                  <div
+                    class="animated-background"
+                    style="
+                      width: 60%;
+                      height: 30px;
+                      margin-top: 7px;
+                      margin-bottom: 15px;
+                      border-radius: var(--border-radius);
+                    "
+                  ></div>
+                  <div
+                    class="animated-background"
+                    style="
+                      width: 100%px;
+                      height: 25px;
+                      margin: 5px 0px;
+                      border-radius: var(--border-radius);
+                    "
+                  ></div>
+                  <div
+                    class="animated-background"
+                    style="
+                      width: 100%;
+                      height: 25px;
+                      margin: 5px 0px;
+                      border-radius: var(--border-radius);
+                    "
+                  ></div>
+                  <div
+                    class="animated-background"
+                    style="
+                      width: 80%;
+                      height: 25px;
+                      margin: 5px 0px;
+                      border-radius: var(--border-radius);
+                    "
+                  ></div>
+                  <div class="result-post-attributes">
+                    <div
+                      class="animated-background"
+                      style="
+                        width: 100%;
+                        height: 27.5px;
+                        margin: 7px 0px;
+                        border-radius: var(--border-radius);
+                      "
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="search-post-wrapper">
+                <div class="image-wrapper animated-background">
+                  <div class="price-distance-wrapper">
+                    <div
+                      class="price animated-background-price"
+                      style="width: 125px; height: 39px; padding: 0px"
+                    ></div>
+                  </div>
+                </div>
+                <div class="text-wrapper" style="flex-grow: 1">
+                  <div
+                    class="animated-background"
+                    style="
+                      width: 60%;
+                      height: 30px;
+                      margin-top: 7px;
+                      margin-bottom: 15px;
+                      border-radius: var(--border-radius);
+                    "
+                  ></div>
+                  <div
+                    class="animated-background"
+                    style="
+                      width: 100%px;
+                      height: 25px;
+                      margin: 5px 0px;
+                      border-radius: var(--border-radius);
+                    "
+                  ></div>
+                  <div
+                    class="animated-background"
+                    style="
+                      width: 100%;
+                      height: 25px;
+                      margin: 5px 0px;
+                      border-radius: var(--border-radius);
+                    "
+                  ></div>
+                  <div
+                    class="animated-background"
+                    style="
+                      width: 80%;
+                      height: 25px;
+                      margin: 5px 0px;
+                      border-radius: var(--border-radius);
+                    "
+                  ></div>
+                  <div class="result-post-attributes">
+                    <div
+                      class="animated-background"
+                      style="
+                        width: 100%;
+                        height: 27.5px;
+                        margin: 7px 0px;
+                        border-radius: var(--border-radius);
+                      "
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="search-post-wrapper">
+                <div class="image-wrapper animated-background">
+                  <div class="price-distance-wrapper">
+                    <div
+                      class="price animated-background-price"
+                      style="width: 125px; height: 39px; padding: 0px"
+                    ></div>
+                  </div>
+                </div>
+                <div class="text-wrapper" style="flex-grow: 1">
+                  <div
+                    class="animated-background"
+                    style="
+                      width: 60%;
+                      height: 30px;
+                      margin-top: 7px;
+                      margin-bottom: 15px;
+                      border-radius: var(--border-radius);
+                    "
+                  ></div>
+                  <div
+                    class="animated-background"
+                    style="
+                      width: 100%px;
+                      height: 25px;
+                      margin: 5px 0px;
+                      border-radius: var(--border-radius);
+                    "
+                  ></div>
+                  <div
+                    class="animated-background"
+                    style="
+                      width: 100%;
+                      height: 25px;
+                      margin: 5px 0px;
+                      border-radius: var(--border-radius);
+                    "
+                  ></div>
+                  <div
+                    class="animated-background"
+                    style="
+                      width: 80%;
+                      height: 25px;
+                      margin: 5px 0px;
+                      border-radius: var(--border-radius);
+                    "
+                  ></div>
+                  <div class="result-post-attributes">
+                    <div
+                      class="animated-background"
+                      style="
+                        width: 100%;
+                        height: 27.5px;
+                        margin: 7px 0px;
+                        border-radius: var(--border-radius);
+                      "
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="search-post-wrapper">
+                <div class="image-wrapper animated-background">
+                  <div class="price-distance-wrapper">
+                    <div
+                      class="price animated-background-price"
+                      style="width: 125px; height: 39px; padding: 0px"
+                    ></div>
+                  </div>
+                </div>
+                <div class="text-wrapper" style="flex-grow: 1">
+                  <div
+                    class="animated-background"
+                    style="
+                      width: 60%;
+                      height: 30px;
+                      margin-top: 7px;
+                      margin-bottom: 15px;
+                      border-radius: var(--border-radius);
+                    "
+                  ></div>
+                  <div
+                    class="animated-background"
+                    style="
+                      width: 100%px;
+                      height: 25px;
+                      margin: 5px 0px;
+                      border-radius: var(--border-radius);
+                    "
+                  ></div>
+                  <div
+                    class="animated-background"
+                    style="
+                      width: 100%;
+                      height: 25px;
+                      margin: 5px 0px;
+                      border-radius: var(--border-radius);
+                    "
+                  ></div>
+                  <div
+                    class="animated-background"
+                    style="
+                      width: 80%;
+                      height: 25px;
+                      margin: 5px 0px;
+                      border-radius: var(--border-radius);
+                    "
+                  ></div>
+                  <div class="result-post-attributes">
+                    <div
+                      class="animated-background"
+                      style="
+                        width: 100%;
+                        height: 27.5px;
+                        margin: 7px 0px;
+                        border-radius: var(--border-radius);
+                      "
+                    ></div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- no clue what this div closes, quadruple checked everything, without this footer is scuffed -->
+    <large-footer></large-footer>
+    <div id="toast"></div>
+    <script>
+      const url = new URL(window.location.href);
+      url.pathname = '/search-page.html';
+      window.history.replaceState({}, '', url);
+    </script>
+    <script>
+      function dropdownCategory() {
+        document.getElementById("category-dropdown").classList.toggle("show");
+      }
+      function dropdownPrice() {
+        document.getElementById("price-dropdown").classList.toggle("show");
+      }
+      function dropdownDistance() {
+        document.getElementById("distance-dropdown").classList.toggle("show");
+      }
+
+      window.onclick = function(event) {
+        if (!event.target.matches('.category-drop-button')) {
+          var i;
+          var dropdownCategory = document.getElementsByClassName("category-dropdown-content");
+          for (i = 0; i < dropdownCategory.length; i++) {
+            var openDropdown = dropdownCategory[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+
+        
+        if (!event.target.matches('.price-drop-button')) {
+          var i;
+          var dropdownPrice = document.getElementsByClassName("price-dropdown-content");
+          for (i = 0; i < dropdownPrice.length; i++) {
+            var openDropdown = dropdownPrice[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+        
+        if (!event.target.matches('.distance-drop-button')) {
+          var i;
+          var dropdownDistance = document.getElementsByClassName("distance-dropdown-content");
+          for (i = 0; i < dropdownDistance.length; i++) {
+            var openDropdown = dropdownDistance[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+      </script>
+    <script src="scripts/browser/search.js"></script>
+    <script src="scripts/page-redirect.js"></script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Post Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.svg" />
+    <link rel="mask-icon" href="assets/logo.svg" color="#FFFFFF" />
+  </head>
+  <body>
+    <nav-bar></nav-bar>
+    <div class="center-margin">
+      <div id="page-margin">
+        <div class="post-page-grid">
+          <h1 id="title" style="grid-area: title"></h1>
+          <div class="post-author-price-wrapper">
+            <span class="in-line-children">
+              <h3>Author:</h3>
+              <h3 id="author"></h3>
+            </span>
+            <h2 id="price"></h2>
+          </div>
+          <div></div>
+          <div class="post-content-wrapper">
+            <!-- source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow-->
+            <div id="slideshow-container" class="slideshow-container"></div>
+            <br />
+
+            <div id="dot-container" style="text-align: center"></div>
+            <h2>Description</h2>
+            <p id="description"></p>
+            <h2>Properties</h2>
+            <div id="post-properties-parent">
+              <span class="in-line-children" style="display: block">
+                <b>Category: </b>
+                <p id="category"></p>
+              </span>
+              <span class="in-line-children" style="display: block">
+                <b>Posted: </b>
+                <p id="timestamp"></p>
+              </span>
+              <span class="in-line-children" style="display: block">
+                <b>Distance: </b>
+                <p id="distance"></p>
+              </span>
+              <span class="in-line-children" style="display: block">
+                <b>Phone Number: </b>
+                <p id="phone-number">+971-50-***-**-**</p>
+              </span>
+            </div>
+          </div>
+          <div style="width: 100%">
+            <img style="width: 100%" src="assets/map.jpg" alt="map" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <large-footer></large-footer>
+    <div id="toast"></div>
+    <script>
+      const url = new URL(window.location.href);
+      url.pathname = '/post.html';
+      window.history.replaceState({}, '', url);
+    </script>
+    <script src="scripts/browser/post.js"></script>
+    <script src="scripts/page-redirect.js"></script>
+  </body>
+</html>
